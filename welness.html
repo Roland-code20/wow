@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wellness Tools</title>
+  <link rel="stylesheet" href="welness.css" />
+</head>
+<body>
+  <header>
+      <div class="header-content"></div>
+     <h1>Wellness Tools</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="articles.html">Learn</a>
+        <a href="experts.html">Talk to Experts</a>
+        <a href="welness.html">Wellness Tools</a>
+    </nav>
+  </div>
+  </header>
+
+  <main>
+    <section class="tools">
+      <video width="100%" height="320" autoplay muted loop controls>
+        <source src="8098143-uhd_2160_3840_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h2>Mood Tracker</h2>
+      <select id="mood-select">
+        <option value="">Select your mood</option>
+        <option>😊 Happy</option>
+        <option>😐 Neutral</option>
+        <option>😟 Stressed</option>
+        <option>😢 Sad</option>
+        <option>😠 Angry</option>
+      </select>
+      <button onclick="saveMood()">Save Mood</button>
+      <p id="saved-mood"></p>
+
+      <h2>Journal</h2>
+      <textarea id="journal" rows="6" cols="40" placeholder="Write your thoughts..."></textarea><br>
+      <button onclick="saveJournal()">Save Entry</button>
+      <!-- Add this button below your Save Entry button -->
+<button onclick="downloadJournal()">Download Journal</button>
+      <p id="saved-entry"></p>
+    </section>
+
+    <!-- ...existing code... -->
+<h2>Mental Assessment Quiz</h2>
+<section class="tools">
+  <form id="mentalQuiz" onsubmit="return assessMentalState()">
+    <div>
+      <label>1. How often do you feel overwhelmed?</label><br>
+      <select required>
+        <option value="">Choose</option>
+        <option value="2">Often</option>
+        <option value="1">Sometimes</option>
+        <option value="0">Rarely</option>
+      </select>
+    </div>
+    <div>
+      <label>2. How well do you sleep at night?</label><br>
+      <select required>
+        <option value="">Choose</option>
+        <option value="0">Very well</option>
+        <option value="1">Okay</option>
+        <option value="2">Poorly</option>
+      </select>
+    </div>
+    <div>
+      <label>3. How connected do you feel to others?</label><br>
+      <select required>
+        <option value="">Choose</option>
+        <option value="0">Very connected</option>
+        <option value="1">Somewhat connected</option>
+        <option value="2">Isolated</option>
+      </select>
+    </div>
+    <div>
+      <label>4. How often do you enjoy activities?</label><br>
+      <select required>
+        <option value="">Choose</option>
+        <option value="0">Often</option>
+        <option value="1">Sometimes</option>
+        <option value="2">Rarely</option>
+      </select>
+    </div>
+    <div>
+      <label>5. How would you rate your mood most days?</label><br>
+      <select required>
+        <option value="">Choose</option>
+        <option value="0">Good</option>
+        <option value="1">Average</option>
+        <option value="2">Low</option>
+      </select>
+    </div>
+    <button type="submit">Get Suggestion</button>
+  </form>
+  <p id="quizResult"></p>
+</section>
+<!-- ...existing code... -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mental Wellness Hub</p>
+  </footer>
+
+  <script>
+    function saveMood() {
+      const mood = document.getElementById("mood-select").value;
+      localStorage.setItem("mood", mood);
+      document.getElementById("saved-mood").innerText = `Mood saved: ${mood}`;
+    }
+
+    function saveJournal() {
+      const entry = document.getElementById("journal").value;
+      localStorage.setItem("journal", entry);
+      document.getElementById("saved-entry").innerText = "Journal entry saved!";
+    }
+
+    window.onload = () => {
+      const mood = localStorage.getItem("mood");
+      const journal = localStorage.getItem("journal");
+
+      if (mood) {
+        document.getElementById("saved-mood").innerText = `Previously saved mood: ${mood}`;
+      }
+      if (journal) {
+        document.getElementById("journal").value = journal;
+      }
+    };
+
+    function downloadJournal() {
+  const entry = document.getElementById("journal").value;
+  const blob = new Blob([entry], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "journal.txt";
+  a.click();
+  URL.revokeObjectURL(url);
+};
+
+function assessMentalState() {
+  const form = document.getElementById("mentalQuiz");
+  let score = 0;
+  const selects = form.querySelectorAll("select");
+  selects.forEach(sel => {
+    score += parseInt(sel.value || "0");
+  });
+
+  let suggestion = "";
+  if (score <= 2) {
+    suggestion = "Your responses suggest you are doing well. Keep up your healthy habits!";
+  } else if (score <= 5) {
+    suggestion = "You may be experiencing some stress. Consider talking to a friend, journaling, or practicing relaxation techniques.";
+  } else {
+    suggestion = "You may be struggling with your mental health. Please consider reaching out to a mental health professional or using the resources on this site.";
+  }
+
+  document.getElementById("quizResult").innerText = `Your score: ${score}\n${suggestion}`;
+  return false; // Prevent form submission
+};
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+  #hero-section {
+  height: 100vh;
+  transition: background-image 1s ease-in-out;
+}
+</style>
+
+  <body id="hero-section">
+  <h1>Welcome to Mental Wellness Hub</h1>
+  <!-- Your content here -->
+  <script src="script.js"></script>
+</body>
+
+<script>
+   [
+  "sad.jpg",
+  "in.jpg",
+  "de.jpg"
+];
+
+let current = 0;
+const hero = document.getElementById("hero-section");
+
+setInterval(() => {
+  hero.style.backgroundImage = `url('${images[current]}')`;
+  hero.style.backgroundSize = "cover";
+  hero.style.backgroundPosition = "center";
+  current = (current + 1) % images.length;
+}, 3000); // every 3 seconds
+</script>
+</html>

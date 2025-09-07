@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meet the Experts</title>
+  <link rel="stylesheet" href="experts.css" />
+</head>
+<body>
+  <header>
+    <h1>Meet the Experts</h1>
+     
+    <nav>
+      <a class='top' href="index.html">Home</a>
+      <a class='top' href="experts.html">Talk to Experts</a>
+      <a class='top' href="articles.html">Learn</a>
+      <a class='top' href="welness.html">Wellness Tools</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Trusted Mental Health Professionals</h2>
+    <video width="100%" height="80%" autoplay muted loop controls>
+      <source src="4099022-uhd_4096_2160_25fps.mp4" type="video/mp4">
+    </video>
+    <section class="experts">
+      <div class="expert-card">
+        <h3>Dr. Ama Owusu</h3>
+        <p>Clinical Psychologist (10+ years)</p>
+        <p>Email: ama.owusu@example.com</p>
+        <a class="touch" onclick="window.alert('Dr. Owusu will contact you soon. You can email her using her address. 😁')">Contact</a>
+      </div>
+      <div class="expert-card">
+        <h3>Dr. Kwame Mensah</h3>
+        <p>Counselor & Youth Advocate</p>
+        <p>Email: kwame.m@example.com</p>
+        <a class="touch" onclick="window.alert('Dr. Mensah will contact you soon. You can email him using his address. 😉')">Contact</a>
+      </div>
+      <div class="expert-card">
+        <h3>Dr. Linda Asare</h3>
+        <p>Therapist | Trauma Support Specialist</p>
+        <p>Email: linda.asare@example.com</p>
+        <a class="touch" onclick="window.alert('Dr. Asare will contact you soon. You can email her using her address. 🙂')">Contact</a>
+      </div>
+      <div class="expert-card">
+        <h3>Dr. Philip Tetteh</h3>
+        <p>Therapist | Trauma Support Specialist</p>
+        <p>Email: philip.tetteh@example.com</p>
+        <a class="touch" onclick="window.alert('Dr. Tetteh will contact you soon. You can email him using his address. ✌️')">Contact</a>
+      </div>
+      <div class="expert-card">
+        <h3>Patience Oppong</h3>
+        <p>Therapist | Trauma Support Specialist</p>
+        <p>Email: patience.oppong@example.com</p>
+        <a class="touch" onclick="window.alert('Ms. Oppong will contact you soon. You can email her using her address. 😎')">Contact</a>
+      </div>
+      <div class="expert-card">
+        <h3>Daniel Kwarteng</h3>
+        <p>Therapist | Trauma Support Specialist</p>
+        <p>Email: daniel.kwarteng@example.com</p>
+        <a class="touch" onclick="window.alert('Mr. Kwarteng will contact you soon. You can email him using his address. 😀')">Contact</a>
+      </div>
+      <div class="expert-card">
+        <h3>Dr. Richard Boateng</h3>
+        <p>Therapist | Trauma Support Specialist</p>
+        <p>Email: richard.boateng@example.com</p>
+        <a class="touch" onclick="window.alert('Dr. Boateng will contact you soon. You can email him using his address. ✌️')">Contact</a>
+      </div>
+      <div class="expert-card">
+        <h3>Beatrice Osei</h3>
+        <p>Therapist | Trauma Support Specialist</p>
+        <p>Email: beatrice.osei@example.com</p>
+        <a class="touch" onclick="window.alert('Ms. Osei will contact you soon. You can email her using her address. 😎')">Contact</a>
+      </div>
+      <div class="expert-card">
+        <h3>Kofi Asamoah</h3>
+        <p>Therapist | Trauma Support Specialist</p>
+        <p>Email: kofi.asamoah@example.com</p>
+        <a class="touch" onclick="window.alert('Mr. Asamoah will contact you soon. You can email him using his address. 😀')">Contact</a>
+      </div>
+    </section>
+  </main>
+
+  <section id="contact">
+    <h2 id="center">Contact Us</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="text" placeholder="Your phone number" required />
+      <input type="number" id="age" placeholder="Age" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button id="press" type="submit">Send Message</button>
+    </form>
+    <p id="formMsg"></p>
+  </section>
+
+  <section id="this">
+    <h2 id="know">Get To Know Some Of Your Experts</h2>
+    <p class="btw">The experts also have some stories and experiences to share on their journey. 😉
+      Get to know something interesting about them.
+    </p>
+        <div class="expertise">
+      <ul>
+        <li>
+          <p class="btw"><b>Dr Ama Owusu</b></p>
+          <p class="btw" id="read"><button class="we" onclick="read()">about</button></p>
+        </li>
+        <li>
+          <p class="btw"><b>Dr. Kwame Mensah</b></p>
+          <p class="btw" id="read1"><button class="we" onclick="read1()">about</button></p>
+        </li>
+        <li>
+          <p class="btw"><b>Dr Linda Asare</b></p>
+          <p class="btw" id="read2"><button class="we" onclick="read2()">about</button></p>
+        </li>
+      </ul>
+    </div>
+    <button id="showLessBtn" class="we" style="display:none; margin: 24px auto 0; display: block;" onclick="showLess()">Show Less</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mental Wellness Hub</p>
+  </footer>
+  <script src="experts.js"></script>
+</body>
+</html>

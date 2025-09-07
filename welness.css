@@ -1,0 +1,144 @@
+body {
+  background: #181c24;
+  color: #eaf6fb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+ header {
+  background-image: url('IMG-20250724-WA0075.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 380px;
+  align-items: center;
+  justify-content: center;
+  height: 320px;
+  
+  
+   
+}
+/*
+header {
+  background-image: url('IMG-20250724-WA0075.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f7c873;
+}
+*/
+.header-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 60px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  color: #f7c873;
+  text-align: center;
+}
+
+nav {
+  margin-top: 18px;
+  text-align: center;
+}
+ 
+
+ 
+nav a {
+  color: #f7c873;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  
+}
+
+nav a:hover {
+  color: #fff;
+  border-bottom: 2px solid #f7c873;
+}
+
+
+.tools {
+  background: #23283a;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px 24px;
+}
+
+.tools h2 {
+  color: #f7c873;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+select, textarea {
+  background: #181c24;
+  color: #eaf6fb;
+  border: 1px solid #4b9aaa;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 16px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+button {
+  background: linear-gradient(90deg, #4b9aaa 60%, #f7c873 100%);
+  color: #23283a;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+  background: #f7c873;
+  color: #181c24;
+}
+
+video {
+  display: block;
+  margin: 0 auto 24px auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(75,154,170,0.10);
+  max-width: 100%;
+}
+
+footer {
+  background: #23283a;
+  color: #f7c873;
+  text-align: center;
+  padding: 18px 0;
+  margin-top: 40px;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.10);
+  font-size: 1.08rem;
+}
+
+h2{
+  text-align: center;
+}
+
+h2{
+  margin:10px;
+  text-align: center;
+}

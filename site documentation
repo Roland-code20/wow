@@ -1,0 +1,99 @@
+# Mental Wellness Hub — Project Documentation
+
+## Project Overview
+
+**Mental Wellness Hub** is a modern, responsive website designed to provide mental health support, education, and access to wellness tools. The platform aims to reduce stigma, offer practical resources, and connect users with mental health professionals in a safe, accessible environment.
+
+---
+
+## Features
+
+- **Home Page:**  
+  Welcoming introduction, daily mental health tips, and key facts about mental health.
+
+- **Articles:**  
+  Curated articles on mental health topics, each with a user rating feature and downloadable resources.
+
+- **Daily Tips:**  
+  Quick, actionable tips for improving mental wellbeing.
+
+- **Experts:**  
+  Profiles of trusted mental health professionals, with contact options and personal stories.
+
+- **Wellness Tools:**  
+  - **Mood Tracker:** Users can select and save their mood.
+  - **Journal:** Users can write, save, and download journal entries.
+  - **Mental Assessment Quiz:** Users answer questions and receive personalized suggestions based on their score.
+
+---
+
+## Technologies Used
+
+- **HTML5** — Semantic structure for all pages.
+- **CSS3** — Modern, responsive, and accessible design with dark mode and gold accent theme.
+- **JavaScript** —  
+  - Dynamic features (tips, quiz, mood tracker, journal, article rating).
+  - LocalStorage for saving user data (mood, journal, ratings).
+- **Media** —  
+  - Background images and header videos for visual appeal.
+  - Embedded videos for engagement.
+
+---
+
+## Folder Structure
+
+mental health website/ │ ├── index.html ├── articles.html ├── tips.html ├── experts.html ├── welness.html ├── articles.css ├── mh.css ├── welness.css ├── experts.css ├── article.js ├── experts.js ├── mh.js ├── images/ (all image assets) ├── videos/ (all video assets) └── site documentation
+
+
+---
+
+## How to Use
+
+1. **Browse Articles:**  
+   Read featured articles and rate them using the star system.
+
+2. **Get Daily Tips:**  
+   Visit the tips page for new mental health tips each day.
+
+3. **Contact Experts:**  
+   View expert profiles and reach out via provided contact options.
+
+4. **Use Wellness Tools:**  
+   - Track your mood and save it for future reference.
+   - Write journal entries and download them as text files.
+   - Take the mental assessment quiz for personalized suggestions.
+
+---
+
+## Accessibility & Responsiveness
+
+- All images have descriptive `alt` text.
+- Layout adapts to mobile, tablet, and desktop screens.
+- Color contrast and font choices support readability.
+
+---
+
+## Customization
+
+- **Add new articles:**  
+  Duplicate a `.card` in `articles.html` and update content.
+- **Add new experts:**  
+  Add a new `.expert-card` in `experts.html` with the expert’s details.
+- **Change theme:**  
+  Update color variables in the CSS files.
+
+---
+
+## Credits
+
+- Images and videos: [Pexels](https://pexels.com) and user-provided assets.
+- Icons: Unicode and open-source resources.
+
+---
+
+## License
+
+This project is for educational and non-commercial use.  
+For other uses, please contact the project owner.
+
+---

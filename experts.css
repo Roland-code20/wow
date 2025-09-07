@@ -1,0 +1,310 @@
+ /* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(120deg, #eaf6fb 60%, #fdf6e3 100%);
+  color: #2e6c77;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #4b9aaa 60%, #4b58aa 100%);
+  color: white;
+  text-align: center;
+  background-image: url(pexels-anastasiia-chaikovska-206547003-12210007.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 320px;
+ /* display: flex;
+  align-items: center;
+  justify-content: center;*/
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 6px 24px rgba(75,154,170,0.12);
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+  padding: 18px 0;
+  
+  box-shadow: 0 2px 8px rgba(75,154,170,0.08);
+  border-radius: 0 0 16px 16px;
+  margin-bottom: 32px;
+}
+
+ 
+nav a {
+  color: #4b9aaa;
+  text-decoration: none;
+  margin:  18px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+
+ 
+
+nav a:hover {
+  color: #2e6c77;
+}
+
+/* Experts Section */
+.experts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  padding: 48px 5vw;
+  margin: 0 auto 48px auto;
+  max-width: 1200px;
+}
+
+.expert-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 24px rgba(75,154,170,0.10);
+  border-left: 6px solid #4b9aaa;
+  border-right: 6px solid #4b58aa;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  
+}
+
+.expert-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(75,154,170,0.18);
+}
+
+.expert-card h3 {
+  color: #3b7d74;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.expert-card p {
+  color: #2e6c77;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.expert-card a {
+  display: inline-block;
+  margin-top: 12px;
+  background: #4b9aaa;
+  color: #fff;
+  padding: 10px 22px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.expert-card a:hover {
+  background: #2e6c77;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .experts {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 32px 2vw;
+  }
+  header {
+    height: 220px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .experts {
+    grid-template-columns: 1fr;
+    padding: 18px 2vw;
+    gap: 18px;
+  }
+  header {
+    height: 120px;
+    font-size: 1rem;
+    border-radius: 0 0 18px 18px;
+  }
+}
+
+/* Section Titles */
+h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+  color: #2e6c77;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Video */
+video {
+  display: block;
+  margin: 32px auto;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(75,154,170,0.10);
+  max-width: 90vw;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 480px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(75,154,170,0.10);
+}
+
+input, textarea {
+  padding: 0.9rem;
+  border: 1px solid #4b9aaa;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f4fafa;
+  transition: border 0.2s;
+}
+
+input:focus, textarea:focus {
+  border: 1.5px solid #2e6c77;
+  outline: none;
+}
+
+button, .we {
+  background: linear-gradient(90deg, #4b9aaa 60%, #4b58aa 100%);
+  color: #fff;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(75,154,170,0.08);
+}
+
+button:hover, .we:hover {
+  background: #2e6c77;
+  box-shadow: 0 4px 16px rgba(75,154,170,0.15);
+}
+
+/* Miscellaneous */
+footer {
+  margin: 32px auto 0 auto;
+  text-align: center;
+  color: #4b9aaa;
+  font-size: 1rem;
+  padding: 18px 0;
+  background: #f4fafa;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -2px 8px rgba(75,154,170,0.08);
+  max-width: 900px;
+}
+
+.top, .btw {
+  text-align: center;
+  line-height: 1.7;
+  color: #2e6c77;
+  margin-bottom: 18px;
+}
+
+.touch {
+  cursor: pointer;
+}
+
+#formMsg {
+  text-align: center;
+  color: #4b9aaa;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+/* Expertise Section */
+#this {
+  background: linear-gradient(135deg, #eaf6fb 60%, #fdf6e3 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(75,154,170,0.10);
+  padding: 48px 24px;
+  margin: 48px auto;
+  max-width: 900px;
+}
+
+#this h2 {
+  color: #2e6c77;
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+#this .btw {
+  color: #4b9aaa;
+  text-align: center;
+  font-size: 1.15rem;
+  margin-bottom: 18px;
+}
+
+.expertise ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expertise li {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(75,154,170,0.08);
+  padding: 28px 20px;
+  min-width: 220px;
+  max-width: 260px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-size: 1.08rem;
+}
+
+.expertise li:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(75,154,170,0.15);
+}
+
+/* Responsive adjustments for expertise */
+@media (max-width: 700px) {
+  #this {
+    padding: 20px 6px;
+  }
+  .expertise ul {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .expertise li {
+    min-width: 90vw;
+    max-width: 98vw;
+  }
+}
+
+/* Hide old/unused styles */
+.expert-card[style*="border: 1px solid black"] {
+  border: none !important;
+}
+
+/* End modern CSS */
