@@ -1,28 +1,38 @@
- /* Base styles */
+ :root {
+  --primary: #4b9aaa;
+  --secondary: #ffe066;
+  --accent: #f28482;
+  --bg-light: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #22223b;
+  --text-accent: #4b9aaa;
+  --shadow: 0 4px 24px rgba(75,154,170,0.10);
+}
+
 body {
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(120deg, #f8fbff 60%, #fdf6e3 100%);
-  color: #23404a;
+  background: var(--bg-light);
+  color: var(--text-main);
   min-height: 100vh;
 }
 
-/* Header - Hero Banner */
+/* Header */
 header {
-  background: linear-gradient(90deg, #4b9aaa 60%, #f7c873 100%);
-  color: #fff;
+  background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 100%);
+  color: var(--text-main);
   text-align: center;
   background-image: url(IMG-20250619-WA0134.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 380px;
+  min-height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0 0 36px 36px;
-  box-shadow: 0 8px 32px rgba(75,154,170,0.18);
+  box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
 }
@@ -30,28 +40,28 @@ header::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(75,154,170,0.32);
+  background: rgba(255,255,255,0.45);
   z-index: 1;
   border-radius: 0 0 36px 36px;
 }
-header > * {
+.header-content {
   position: relative;
   z-index: 2;
+  width: 100%;
+  padding: 48px 0 24px 0;
 }
-
-/* Navigation */
-nav {
-  text-align: center;
-  padding: 18px 0;
-  background: rgba(255,255,255,0.85);
-  box-shadow: 0 2px 12px rgba(75,154,170,0.10);
-  border-radius: 0 0 18px 18px;
-  margin-bottom: 36px;
-  backdrop-filter: blur(4px);
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  color: var(--primary);
 }
-
-nav a {
-  color: #3b7d74;
+header nav {
+  margin-top: 18px;
+}
+header nav a {
+  color: var(--accent);
   text-decoration: none;
   margin: 0 18px;
   font-weight: 600;
@@ -61,43 +71,43 @@ nav a {
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
 }
+header nav a:hover {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
 
-nav a:hover {
-  color: #23404a;
-  border-bottom: 2px solid #4b9aaa;
+/* Main Layout */
+main {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 0 16px;
 }
 
 /* Hero Section */
 .hero {
-  padding: 64px 10vw 32px 10vw;
+  padding: 48px 8vw 32px 8vw;
   text-align: center;
-  background: rgba(255,255,255,0.85);
+  background: #eaf6f9;
   border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(75,154,170,0.10);
+  box-shadow: var(--shadow);
   margin: -60px auto 48px auto;
   max-width: 900px;
-  backdrop-filter: blur(2px);
   position: relative;
   z-index: 2;
 }
-
-.hero h1 {
-  font-size: 2.8rem;
-  color: #23404a;
-  margin-bottom: 18px;
-  font-weight: 800;
-  letter-spacing: 1px;
+.hero h2 {
+  color: var(--primary);
+  font-size: 2.2rem;
+  margin-bottom: 12px;
 }
-
 .hero p {
-  font-size: 1.25rem;
-  color: #3b7d74;
+  font-size: 1.18rem;
+  color: #3a3a3a;
   margin-bottom: 28px;
 }
-
 .hero button {
   padding: 14px 32px;
-  background: linear-gradient(90deg, #4b9aaa 60%, #f7c873 100%);
+  background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 100%);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -107,81 +117,94 @@ nav a:hover {
   box-shadow: 0 2px 8px rgba(75,154,170,0.10);
   transition: background 0.2s, box-shadow 0.2s;
 }
-
 .hero button:hover {
-  background: #23404a;
+  background: var(--accent);
+  color: #fff;
   box-shadow: 0 6px 18px rgba(75,154,170,0.18);
 }
 
-/* Section Cards */
-.intro-section, .challenges-section, .mission-section {
-  padding: 48px 28px;
-  margin: 36px auto;
-  max-width: 900px;
-  /*background: rgba(255,255,255,0.92);
+/* Card Sections */
+.card {
+  background: var(--bg-card);
   border-radius: 18px;
-  box-shadow: 0 4px 18px rgba(75,154,170,0.12);
- border-left: 8px solid #4b9aaa;
-  border-right: 8px solid #f7c873;*/
-  line-height: 1.7;
-  font-size: 1.12rem;
-  backdrop-filter: blur(2px);
+  box-shadow: var(--shadow);
+  padding: 32px 24px;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
-
+.card:hover {
+  box-shadow: 0 8px 32px rgba(75,154,170,0.18);
+  transform: translateY(-4px) scale(1.01);
+}
+.section-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(75,154,170,0.10);
+  flex-shrink: 0;
+}
+.card > div {
+  flex: 1;
+}
 .intro-section h2, .challenges-section h2, .mission-section h2 {
-  color: #23404a;
+  color: var(--primary);
   margin-bottom: 18px;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
-
 ul {
   padding-left: 24px;
   margin-top: 12px;
   font-size: 1.08rem;
 }
 
-video, #i1, #i2, #i3 {
-  display: block;
-  margin: 40px auto;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(75,154,170,0.10);
-  max-width: 80vw;
-  background: #f8fbff;
-}
-
 /* Footer */
 footer {
-  background: rgba(255,255,255,0.85);
-  padding: 24px 0;
+  background: #eaf6f9;
+  color: var(--primary);
   text-align: center;
+  padding: 24px 0;
   margin-top: 56px;
-  color: #4b9aaa;
   font-size: 1.08rem;
   border-radius: 18px 18px 0 0;
   box-shadow: 0 -2px 12px rgba(75,154,170,0.10);
   max-width: 950px;
   margin-left: auto;
   margin-right: auto;
-  backdrop-filter: blur(2px);
 }
 
 /* Responsive Design */
 @media (max-width: 900px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 8px;
+  }
+  .section-img {
+    width: 100%;
+    height: 180px;
+    max-width: 98vw;
+  }
   .hero, .intro-section, .challenges-section, .mission-section {
     padding: 32px 8px;
     max-width: 98vw;
   }
   header {
-    height: 180px;
+    min-height: 140px;
     font-size: 1.1rem;
     border-radius: 0 0 18px 18px;
   }
 }
 
 @media (max-width: 600px) {
-  .hero h1 {
+  .hero h1, header h1 {
     font-size: 2rem;
   }
   .intro-section h2, .challenges-section h2, .mission-section h2 {
@@ -191,39 +214,18 @@ footer {
     font-size: 1rem;
     margin: 0 8px;
   }
-}
-
-
-/* ...existing code... */
-
-.hero-img, .section-img {
-  display: block;
-  /*max-width: 340px;*/
-  width: 100%;
-  height: 300px;
-  margin: 24px auto 0 auto;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(75,154,170,0.10);
-  object-fit: cover;
-}
-
-/* Responsive: even smaller on mobile */
-@media (max-width: 600px) {
-  .hero-img, .section-img {
-    max-width: 90vw;
-    margin-top: 16px;
-    border-radius: 12px;
+  .section-img {
+    height: 120px;
+    border-radius: 10px;
   }
 }
 
-
-.section-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto 24px auto;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(75,154,170,0.10);
+/* Utility */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #eaf6f9;
 }
-/* ...existing code... */
-/* End homepage CSS */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 8px;
+}
